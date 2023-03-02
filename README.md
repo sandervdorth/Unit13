@@ -1,5 +1,30 @@
-# Pantheon Empty Upstream
+This is a composer based installer for the [Drutopia distribution](http://www.drupal.org/project/drutopia).
 
-This is an empty repository that is, save for this explanatory text, devoid of all content. This upstream is appropriate to use in situations where a Pantheon site will be created through a build step (see the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin) and managed completely by Composer. Typically, the build step should completely replace the content provided by the upstream. If this README persists after the build step, it will do no harm; however, it would be advisable to replace this text with a description of the project.
+# Prerequisites
 
-If this upstream is used to install a site that does not have a build step, then you will not be able to install or use your site. In that event, the best thing to do would be to delete it and start over, either by selecting a different upstream, or by using the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin) `terminus build-env:create-project` command to set up a build server.
+1. [Prepare a local server for Drupal](https://www.drupal.org/docs/develop/local-server-setup)
+2. [Install Composer](https://getcomposer.org/download/)
+
+
+## Installation of Drutopia basic
+
+```
+composer create-project drutopia/drutopia_template:dev-master --no-interaction DIRECTORY
+```
+
+Composer will create a new directory called DIRECTORY (change to whatever presumably lower-case name you would like). Inside you will find the web directory with the entire code base of [Drutopia distribution](http://www.drupal.org/project/drutopia). You should be able to install it like any other Drupal site.
+
+## Updating
+
+Drutopia manages the version of Drupal core, so you should not require the `drupal/core` project. To update to a new version of core, update to the version of Drutopia that includes the new core version. For example:
+
+```
+composer require --no-update drutopia/drutopia:~1.0-rc2
+composer update
+```
+
+## Making and managing custom changes
+
+You will likely want to add the contents of this directory to git version control, including the `composer.lock` file that was created when you ran `composer create-project`.
+
+You can `composer require` any packages such as Drupal modules you wish to add to your site.
