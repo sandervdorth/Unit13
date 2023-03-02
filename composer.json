@@ -26,12 +26,11 @@
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
-        "drutopia/drutopia": "dev-8.x-1.x",
-        "pantheon-upstreams/upstream-configuration": "dev-main",
+        "drush/drush": "^11 || ^12",
+        "drutopia/drutopia": "~1.0-rc2",
         "pantheon-systems/drupal-integrations": "^9",
-        "drush/drush": "^11 || ^12"
+        "pantheon-upstreams/upstream-configuration": "dev-master"
     },
-    "require-dev": {},
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -100,4 +99,3 @@
         }
     }
 }
-yfvuhvhih

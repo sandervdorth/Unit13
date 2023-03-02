@@ -20,3 +20,4 @@
 /vendor/
 /.editorconfig
 /.gitattributes
+/.drush-lock-update
