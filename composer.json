@@ -29,7 +29,7 @@
         "drush/drush": "^11 || ^12",
         "drutopia/drutopia": "~1.0-rc2",
         "pantheon-systems/drupal-integrations": "^9",
-        "pantheon-upstreams/upstream-configuration": "dev-master"
+        "pantheon-upstreams/upstream-configuration": "dev-main"
     },
     "conflict": {
         "drupal/drupal": "*"
